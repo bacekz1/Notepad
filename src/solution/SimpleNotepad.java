@@ -8,9 +8,6 @@ public class SimpleNotepad implements INotepad {
     public boolean addText(String text, int pageNumber) {
         if (this.pageNumber > pageNumber) {
             pages[pageNumber].addText(text);
-            if (pageNumber == pages.length) {
-                reSizeArray();
-            }
             return true;
         }
         return false;

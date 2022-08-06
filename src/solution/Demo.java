@@ -14,6 +14,7 @@ public class Demo {
         System.out.println(test.addText(" wow2", 5));
         test.printAll();
         System.out.println(test.deleteText(9));
+        System.out.println(test.deleteText(10));
         test.printAll();
         System.out.println(test.searchWord("eba"));
         test.printAllPagesWithDigits();
@@ -30,6 +31,5 @@ public class Demo {
         secureNotepad.addText("ala","bala");
         secureNotepad.addText("ala","bala");
         secureNotepad.printAll();
-
     }
 }

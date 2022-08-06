@@ -1,7 +1,7 @@
 package solution;
 
 public class Page {
-    private final String empty = "";
+    private static final String empty = "";
     private final String title;
     private String text;
 
