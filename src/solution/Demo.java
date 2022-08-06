@@ -26,6 +26,10 @@ public class Demo {
         test2.addText("ala", "bala");
         System.out.println(test2);
         test2.printAll();
+        SecureNotepad secureNotepad = SecureNotepad.create();
+        secureNotepad.addText("ala","bala");
+        secureNotepad.addText("ala","bala");
+        secureNotepad.printAll();
 
     }
 }

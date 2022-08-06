@@ -1,6 +1,7 @@
 package solution;
 
 public class Page {
+    private final String empty = "";
     private final String title;
     private String text;
 
@@ -14,7 +15,7 @@ public class Page {
     }
 
     void deleteText() {
-        this.text = "";
+        this.text = empty;
     }
 
     void setText(String text) {
@@ -36,6 +37,6 @@ public class Page {
 
     @Override
     public String toString() {
-        return String.format("title:%s\ntext:%s\n", this.title, this.text);
+        return String.format("title:%s\ntext:%s", this.title, this.text);
     }
 }

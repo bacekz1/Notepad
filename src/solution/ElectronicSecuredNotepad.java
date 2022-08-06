@@ -1,7 +1,8 @@
 package solution;
 
 public class ElectronicSecuredNotepad extends SecureNotepad implements ISecuredNotepad {
-    private static final String DEVICE_OFF = "Please start device.";
+
+    private final String DEVICE_OFF = "Please start device.";
     private boolean isStarted;
 
     public ElectronicSecuredNotepad(String password) {
