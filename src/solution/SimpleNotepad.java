@@ -6,7 +6,7 @@ public class SimpleNotepad implements INotepad {
 
     @Override
     public boolean addText(String text, int pageNumber) {
-        if (isOnBound()) {
+        if (isOnBound(pageNumber)) {
             pages[pageNumber].addText(text);
             return true;
         }
@@ -20,11 +20,12 @@ public class SimpleNotepad implements INotepad {
         }
         Page page = new Page(title, text);
         pages[this.pageNumber++] = page;
+
     }
 
     @Override
     public boolean rewriteText(String text, int pageNumber) {
-        if (isOnBound()) {
+        if (isOnBound(pageNumber)) {
             pages[pageNumber].setText(text);
             return true;
         }
@@ -33,7 +34,7 @@ public class SimpleNotepad implements INotepad {
 
     @Override
     public boolean deleteText(int pageNumber) {
-        if (isOnBound()) {
+        if (isOnBound(pageNumber)) {
             pages[pageNumber].deleteText();
             return true;
         }
@@ -84,8 +85,8 @@ public class SimpleNotepad implements INotepad {
         pages = pages1;
     }
 
-    private boolean isOnBound() {
-        return pageNumber > 0 || pageNumber < pages.length;
+    private boolean isOnBound(int inputNum) {
+        return pageNumber > 0 && pageNumber >= inputNum && pageNumber != pages.length;
     }
 
     private boolean isArrayFilled() {
