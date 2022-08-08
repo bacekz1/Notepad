@@ -23,7 +23,7 @@ public class Page {
     }
 
     boolean searchWord(String word) {
-        return (this.text.contains(word));
+        return (this.text.toLowerCase().contains(word.toLowerCase()));
     }
 
     boolean containsDigits() {

@@ -72,4 +72,32 @@ public class SecureNotepad extends SimpleNotepad {
             return false;
         }
     }
+
+    @Override
+    public void printAll() {
+        System.out.println(ENTER_PASSWORD);
+        String input = sc.nextLine();
+        if (input.equals(password)) {
+            super.printAll();
+        }
+    }
+
+    @Override
+    public boolean searchWord(String word) {
+        System.out.println(ENTER_PASSWORD);
+        String input = sc.nextLine();
+        if (input.equals(password)) {
+            return super.searchWord(word);
+        }
+        return false;
+    }
+
+    @Override
+    public void printAllPagesWithDigits() {
+        System.out.println(ENTER_PASSWORD);
+        String input = sc.nextLine();
+        if (input.equals(password)) {
+            super.printAllPagesWithDigits();
+        }
+    }
 }

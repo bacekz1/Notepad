@@ -48,6 +48,28 @@ public class ElectronicSecuredNotepad extends SecureNotepad implements ISecuredN
     }
 
     @Override
+    public void printAll() {
+        if (isStarted()) {
+            super.printAll();
+        }
+    }
+
+    @Override
+    public boolean searchWord(String word) {
+        if (isStarted()) {
+            return super.searchWord(word);
+        }
+        return false;
+    }
+
+    @Override
+    public void printAllPagesWithDigits() {
+        if (isStarted()) {
+            super.printAllPagesWithDigits();
+        }
+    }
+
+    @Override
     public void start() {
         this.isStarted = true;
     }
